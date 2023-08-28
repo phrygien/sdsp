@@ -18,10 +18,10 @@
                     <x-nav-link :href="route('plateforme.materiele')" :active="request()->routeIs('plateforme.materiele')">
                         {{ __('Materiels') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('')">
                         {{ __('Maintenances') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('')">
                         {{ __('Rapports') }}
                     </x-nav-link>
                 </div>

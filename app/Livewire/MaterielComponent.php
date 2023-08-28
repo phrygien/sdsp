@@ -17,7 +17,10 @@ class MaterielComponent extends Component
 
     public function render()
     {
-        return view('livewire.materiel-component');
+        $materieles = Materiel::all();
+        return view('livewire.materiel-component', [
+            'materieles' => $materieles
+        ]);
     }
 
     /*
@@ -35,7 +38,7 @@ class MaterielComponent extends Component
         $this->afficherListe = true;
     }
 
-    public $notifcation = false;
+    public $notification = false;
     public function store()
     {
         Materiel::create([
@@ -45,8 +48,15 @@ class MaterielComponent extends Component
             'date_acquisition' => now(),
             'statut' => $this->statut
         ]);
-        $this->notifcation = true;
+        $this->notification = true;
+        $this->afficherFormeCreate = true;
+        $this->afficherListe = false;
         //session()->flash('message', 'Materiele bien enregistré!');
         $this->reset();
+    }
+
+    public function supprimer($id)
+    {
+        Materiel::find($id)->delete();
     }
 }

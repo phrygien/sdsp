@@ -31,12 +31,12 @@
                                     </th>
     
                                     <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                        About
+                                        cout d'acquisition
                                     </th>
     
-                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">Users</th>
+                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">Date d'acquisition</th>
     
-                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">License use</th>
+                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400">Date d'enregistrement</th>
     
                                     <th scope="col" class="relative py-3.5 px-4">
                                         <span class="sr-only">Edit</span>
@@ -65,28 +65,22 @@
                                     </td>
                                     <td class="px-4 py-4 text-sm whitespace-nowrap">
                                         <div>
-                                            <h4 class="text-gray-700 dark:text-gray-200">Content curating app</h4>
-                                            <p class="text-gray-500 dark:text-gray-400">Brings all your news into one place</p>
+                                            <h4 class="text-gray-700 dark:text-gray-200">{{ $materiele->cout_acquisition}}</h4>
+                                           
                                         </div>
                                     </td>
-                                    <td class="px-4 py-4 text-sm whitespace-nowrap">
-                                        <div class="flex items-center">
-                                            <img class="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" alt="">
-                                            <img class="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" alt="">
-                                            <img class="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80" alt="">
-                                            <img class="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" alt="">
-                                            <p class="flex items-center justify-center w-6 h-6 -mx-1 text-xs text-blue-600 bg-blue-100 border-2 border-white rounded-full">+4</p>
-                                        </div>
+                                    <td class="px-4 py-4 text-sm whitespace-nowrap">{{ $materiele->date_acquisition}}
+                                     
                                     </td>
     
                                     <td class="px-4 py-4 text-sm whitespace-nowrap">
-                                        <div class="w-48 h-1.5 bg-blue-200 overflow-hidden rounded-full">
-                                            <div class="bg-blue-500 w-2/3 h-1.5"></div>
-                                        </div>
+                                        {{ $materiele->created_at}}
                                     </td>
     
                                     <td class="px-4 py-4 text-sm whitespace-nowrap">
                                         <x-danger-button>Supprimer</x-danger-button>
+                                        <x-warnig-button>Modifier</x-warnig-button>
+                                        
                                     </td>
                                 </tr>
     
